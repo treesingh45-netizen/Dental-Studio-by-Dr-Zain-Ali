@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-playfair: "Playfair Display", ui-serif, Georgia, serif;
+  --font-heading: "Playfair Display", ui-serif, Georgia, serif;
+
+  --color-dental: #2D4A3A;
+  --color-dental-light: #E8F0EB;
+  --color-dental-dark: #1A3125;
+  --color-dental-accent: #3D6A4A;
+  --color-dental-warm: #FAF9F6;
+  --color-dental-cream: #FDFBF7;
+}
+
+body {
+  @apply font-sans antialiased text-gray-900 bg-white;
+}
+
+.gradient-text {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-dental to-dental-accent;
+}
+
+.card-hover {
+  @apply hover:shadow-xl hover:-translate-y-1 transition-all duration-300;
+}
+
+.section-heading {
+  @apply font-playfair;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #a8baba;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3D6A4A;
+}
+
+html {
+  scroll-behavior: smooth;
+}
